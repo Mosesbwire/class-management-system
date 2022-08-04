@@ -11,7 +11,7 @@
     <div class="container">
             <header>
                 <div class="header row">
-                    <div class="mobile-menu-toggle">
+                    <div class="menu-toggle" id="menu-toggle">
                         <img src="./icons/menu.png" alt="" srcset="" class="hambuger-menu">
                     </div>
                     <form action="" method="get" class="search-form">
@@ -22,8 +22,9 @@
                     </form>
                 </div>
             </header>
-            <aside class="menu">
+            <aside class="menu" id="menu">
                 <div class="wrapper">
+                    <p class="close-menu" id="close-menu">&times;</p>
                     <div class="profile">
                         <div class="avatar">
                             <img src="./icons/user.png" alt="user avatar placeholder icon" srcset="" class="avatar-icon">
@@ -108,5 +109,6 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     </script>
     <script src="./javascript/chart.js"></script>
+    <script src="./javascript/menu.js"></script>
 </body>
 </html>

@@ -122,10 +122,23 @@ img {
     background-color:#e9e3ff;
     color: #000;
     width: 80%;
+    height: 100vh;
     font-size:medium;
+    position: relative;
     position: absolute;
     top: 0;
-    
+    left: -316.8px;
+    visibility: hidden;
+    transition:left 500ms ease-in;
+}
+
+.close-menu {
+    position: absolute;
+    top: 15px;
+    left: 90%;
+    color: black;
+    font-size: 32px;
+    font-weight: bolder;
 }
 .menu-item {
     align-items: center;
