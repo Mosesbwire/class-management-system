@@ -9,100 +9,101 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <form action="" method="get">
-                <input type="search" name="search" id="search" placeholder="search">
-                <button type="submit">
-                    <img src="./icons/search.png" alt="" class="icon-search">
-                </button>
-                
-            </form>
-            <div class="mobile-menu-toggle">
-                <img src="./icons/menu.png" alt="" srcset="" class="hambuger-menu">
-            </div>
-        </header>
-        <aside class="menu">
-            <div class="profile">
-                <div class="avatar">
-                    <img src="./icons/user.png" alt="user avatar placeholder icon" srcset="" class="avatar-icon">
+            <header>
+                <div class="header row">
+                    <div class="mobile-menu-toggle">
+                        <img src="./icons/menu.png" alt="" srcset="" class="hambuger-menu">
+                    </div>
+                    <form action="" method="get" class="search-form">
+                        <input type="search" name="search" id="search" placeholder="search">
+                        <button type="submit" class="search-icon-btn">
+                            <img src="./icons/search.png" alt="" class="icon-search">
+                        </button>
+                    </form>
                 </div>
-                <div class="proile-info">
-                    <p>Name: <span class="student-name">Username</span></p>
-                    <p>Id: <span class="student-id">2900090</span></p>
-                </div>
-            </div>
-
-            <div class="menu-item">
-                <img src="./icons/dashboard.png" alt="dashboard icon" class="menu-icon">
-                <p>Dashboard</p>
-            </div>
-            <div class="menu-item">
-                <img src="./icons/notes.png" alt="notebook icon" class="menu-icon">
-                <p>Notes</p>
-            </div>
-            <div class="menu-item">
-                <img src="./icons/assignment.png" alt="assingment icon" class="menu-icon">
-                <p>Assingments</p>
-            </div>
-            <div class="menu-item">
-                <img src="./icons/notification.png" alt="bell notification icon" class="menu-icon">
-                <p>Notices</p>
-            </div>
-            <div class="menu-item">
-                <img src="./icons/mail.png" alt="closed mail envelope icon" class="menu-icon">
-                <p>Message</p>
-            </div>
-            <div class="menu-item">
-                
-                <p>Tutor Profile</p>
-            </div>
-            <div class="menu-item">
-                <p>LogOut</p>
-            </div>  
-        </aside>
-        <main class="main">
-            <div class="chart-1">
-                <canvas id="assesment-test-chart" ></canvas>
-            </div>
-
-            <div class="chart-2">
-                <canvas id="assignment-chart"></canvas>
-            </div>
-            <div class="card">
-                <div class="outer-card">
-                    <div class="inner-card">
-                        <p>Topics</p>
-                        <p>5</p>
-                        <P>Total Topics - 10</P>
+            </header>
+            <aside class="menu">
+                <div class="wrapper">
+                    <div class="profile">
+                        <div class="avatar">
+                            <img src="./icons/user.png" alt="user avatar placeholder icon" srcset="" class="avatar-icon">
+                        </div>
+                        <div class="proile-info">
+                            <p>Name: <span class="student-name">Username</span></p>
+                            <p>Id: <span class="student-id">2900090</span></p>
+                        </div>
+                    </div>
+                    <div class="menu-item row">
+                        <img src="./icons/dashboard.png" alt="dashboard icon" class="menu-icon">
+                        <p>Dashboard</p>
+                    </div>
+                    <div class="menu-item row">
+                        <img src="./icons/notes.png" alt="notebook icon" class="menu-icon">
+                        <p>Notes</p>
+                    </div>
+                    <div class="menu-item row">
+                        <img src="./icons/assignment.png" alt="assingment icon" class="menu-icon">
+                        <p>Assingments</p>
+                    </div>
+                    <div class="menu-item row">
+                        <img src="./icons/notification.png" alt="bell notification icon" class="menu-icon">
+                        <p>Notices</p>
+                    </div>
+                    <div class="menu-item row">
+                        <img src="./icons/mail.png" alt="closed mail envelope icon" class="menu-icon">
+                        <p>Message</p>
+                    </div>
+                    <div class="menu-item">
+                        <strong>
+                            Tutor Profile
+                        </strong>
+                    </div>
+                    <div class="menu-item">
+                       <button class="btn">Logout</button>
                     </div>
                 </div>
-            </div>
-            <div class="card">
-                <div class="outer-card">
-                    <div class="inner-card">
-                        <p>Hours</p>
-                        <p>30</p>
-                        <P>Total Hours - 100 Hours</P>
+            </aside>
+            <main class="main">
+                <div class="chart-1">
+                    <canvas id="assesment-test-chart" ></canvas>
+                </div>
+                <div class="chart-2">
+                    <canvas id="assignment-chart"></canvas>
+                </div>
+                <div class="card">
+                    <div class="outer-card">
+                        <div class="inner-card">
+                            <p>Topics</p>
+                            <p>5</p>
+                            <P>Total Topics - 10</P>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div class="card">
+                    <div class="outer-card">
+                        <div class="inner-card">
+                            <p>Hours</p>
+                            <p>30</p>
+                            <P>Total Hours - 100 Hours</P>
+                        </div>
+                    </div>
+                </div>
             
-        </main>
-        <aside class="schedule">
-            <h3>Events</h3>
-            <div class="calender">
-                <iframe src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=Africa%2FNairobi&showPrint=0&showTitle=0&showTz=0&showTabs=1&showCalendars=0&src=YTQ4MjJvYjZtOXAxdTh2Yjg4Zm9qOG81NDBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23EF6C00" style="border-width:0" width="400" height="400" frameborder="0" scrolling="no"></iframe>
-            </div>
-            <div class="events">
-                appears if there's an event for today
-                <ul></ul>
-            </div>
-            <div>
-                <p>Semester ends on: <span>30/12/2022</span></p>
-            </div>
-        </aside>
+            </main>
+            <aside class="schedule">
+                <h3>Events</h3>
+                <div class="calender">
+                    <iframe src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=Africa%2FNairobi&showPrint=0&showTitle=0&showTz=0&showTabs=1&showCalendars=0&src=YTQ4MjJvYjZtOXAxdTh2Yjg4Zm9qOG81NDBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23EF6C00" style="border-width:0" width="400" height="400" frameborder="0" scrolling="no"></iframe>
+                </div>
+                <div class="events">
+                    appears if there's an event for today
+                    <ul></ul>
+                </div>
+                <div>
+                    <p>Semester ends on: <span>30/12/2022</span></p>
+                </div>
+            </aside>
     </div>
-
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     </script>
