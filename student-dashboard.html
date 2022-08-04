@@ -12,17 +12,19 @@
         <header>
             <form action="" method="get">
                 <input type="search" name="search" id="search" placeholder="search">
-                <img src="" alt="" class="icon-search">
-                <button type="submit">Search</button>
+                <button type="submit">
+                    <img src="./icons/search.png" alt="" class="icon-search">
+                </button>
+                
             </form>
             <div class="mobile-menu-toggle">
-                <img src="" alt="" srcset="" class="hambuger-menu">
+                <img src="./icons/menu.png" alt="" srcset="" class="hambuger-menu">
             </div>
         </header>
         <aside class="menu">
             <div class="profile">
                 <div class="avatar">
-                    <img src="" alt="" srcset="">
+                    <img src="./icons/user.png" alt="user avatar placeholder icon" srcset="" class="avatar-icon">
                 </div>
                 <div class="proile-info">
                     <p>Name: <span class="student-name">Username</span></p>
@@ -31,27 +33,27 @@
             </div>
 
             <div class="menu-item">
-                <img src="" alt="" class="menu-icon">
+                <img src="./icons/dashboard.png" alt="dashboard icon" class="menu-icon">
                 <p>Dashboard</p>
             </div>
             <div class="menu-item">
-                <img src="" alt="" class="menu-icon">
+                <img src="./icons/notes.png" alt="notebook icon" class="menu-icon">
                 <p>Notes</p>
             </div>
             <div class="menu-item">
-                <img src="" alt="" class="menu-icon">
+                <img src="./icons/assignment.png" alt="assingment icon" class="menu-icon">
                 <p>Assingments</p>
             </div>
             <div class="menu-item">
-                <img src="" alt="" class="menu-icon">
+                <img src="./icons/notification.png" alt="bell notification icon" class="menu-icon">
                 <p>Notices</p>
             </div>
             <div class="menu-item">
-                <img src="" alt="" class="menu-icon">
+                <img src="./icons/mail.png" alt="closed mail envelope icon" class="menu-icon">
                 <p>Message</p>
             </div>
             <div class="menu-item">
-                <img src="" alt="" class="menu-icon">
+                
                 <p>Tutor Profile</p>
             </div>
             <div class="menu-item">
@@ -60,19 +62,31 @@
         </aside>
         <main class="main">
             <div class="chart-1">
-                chart components
-                continous assesment tests
+                <canvas id="assesment-test-chart" ></canvas>
             </div>
 
             <div class="chart-2">
-                pie chart for assigments
+                <canvas id="assignment-chart"></canvas>
             </div>
-            <div class="chart-3">
-                topics done/total
+            <div class="card">
+                <div class="outer-card">
+                    <div class="inner-card">
+                        <p>Topics</p>
+                        <p>5</p>
+                        <P>Total Topics - 10</P>
+                    </div>
+                </div>
             </div>
-            <div class="chart-4">
-                hours lectured/total
+            <div class="card">
+                <div class="outer-card">
+                    <div class="inner-card">
+                        <p>Hours</p>
+                        <p>30</p>
+                        <P>Total Hours - 100 Hours</P>
+                    </div>
+                </div>
             </div>
+            
         </main>
         <aside class="schedule">
             <h3>Events</h3>
@@ -88,5 +102,10 @@
             </div>
         </aside>
     </div>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+    <script src="./javascript/chart.js"></script>
 </body>
 </html>

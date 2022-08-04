@@ -54,6 +54,25 @@ h1,p {
     flex-direction: column;
 }
 
+/* student dashboard */
+.icon-search {
+    width: 1.5em;
+    height: 1.5em;
+}
+.hambuger-menu {
+    width: 1.5em;
+    height: 1.5em;
+}
+.avatar-icon {
+    width: 3.5em;
+    height: 3.5em
+}
+
+.menu-icon {
+    width: 1.5em;
+    height: 1.5em;
+}
+
 
 /* media queries */
 /* tablets */
