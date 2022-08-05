@@ -186,12 +186,6 @@ img {
     padding: 1em;
 }
 
-.inner-card::before{
-    content: '';
-    height: 1em;
-    background-color: beige;
-}
-
 .metric-done {
     font-size: 3em;
     font-weight: bold;
@@ -202,6 +196,57 @@ img {
 }
 
 
+/* assingment page */
+.assn-body {
+    background-color: #f1edff;
+}
+
+.ic-assn {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.assn-title {
+    padding-left: 1em;
+    border-right: 2px solid rgb(199, 191, 239);
+
+}
+
+
+.grid-sm {
+    display: none;
+}
+
+.grid-col-6 {
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+
+.assingment-heading {
+    background-color: #8a70d6;
+    color: white;
+    text-align: center;
+    margin-block-end: .75em;
+
+}
+
+.assingment-heading > div {
+    padding-block: 1em;
+    border-left: 1px solid black;
+}
+
+.assingment-card {
+    background-color: #e9e3ff;
+    padding-block: 1em;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin-block-end: .25em;
+}
+
+.text-center {
+    text-align: center;
+    border-right: 2px solid rgb(199, 191, 239);
+}
 
 
 
@@ -223,6 +268,15 @@ img {
     /*menu  */
     .menu {
         width: 40%;
+    }
+
+    /* assignment page */
+    .grid-m {
+        display: block;
+    }
+
+    .grid-col-6 {
+        grid-template-columns: 60% 20% 20%;
     }
 }
 
@@ -274,7 +328,20 @@ img {
     }   
 
     
+    /* assingment page */
 
+    .grid-lg {
+        display: block;
+    }
+
+    .grid-col-6{
+        grid-template-columns: 5% 45% 15% 15% 10% 10%;
+    }
+
+    .center-img {
+        display: grid;
+        justify-content: center;
+    }
 
 
     
