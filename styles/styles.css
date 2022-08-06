@@ -161,7 +161,70 @@ img {
     margin-right: .8em;
 }
 
+/* create notice modal */
+.create-notice-modal {
+    position: fixed;
+    background-color: rgba(0, 0, 0, .7);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    display: none;
+    
+}
+
+
+.modal-wrapper  {
+    display: grid;
+    justify-content: center;
+}
+
+
+.notice-form {
+    background-color: pink;
+    min-width: 365px;
+    height: 300px;
+    margin-top: 4em;
+    padding-block: 2.5em;
+    position: relative;
+
+}
+
+.close-modal {
+    color: white;
+    font-weight: bold;
+    font-size: 32px;
+    position: absolute;
+    top: 10px;
+    left: 90%;
+    cursor: pointer;
+    
+}
+
+.notice-form > h3 {
+    padding-left: 1.5em;
+    margin-bottom: .8em;
+}
+
+.notice-form-grp {
+    display: flex;
+    flex-direction: column;
+}
+
+#notice-body {
+    width: 90%;
+    height: 150px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid;
+    padding: .6em;
+    
+    border-color: black;
+}
 /*main section */
+
+
 /* charts */
 
 .chart-1 {
@@ -346,6 +409,12 @@ img {
     .ic-msg {
         padding-left: 5em;
     }
+
+    /* notice modal */
+
+    #notice-title {
+        width: 90%;
+    }
 }
 
 
@@ -431,6 +500,16 @@ img {
     /* inbox */
     .message-container {
         margin-inline: auto;
+    }
+
+    /* notice modal  */
+
+    .notice-form {
+        max-width: 500px;
+    }
+
+    #notice-title {
+        width: 90%;
     }
     
 
