@@ -288,6 +288,11 @@ img {
     grid-template-columns: 65% 35%;
 }
 
+.create-assingment {
+    margin-block: 1.5em;
+    width: 60%
+}
+
 .assingment-heading {
     background-color: #8a70d6;
     color: white;
@@ -363,6 +368,32 @@ img {
 }
 
 
+/* create assingment */
+
+.assingment-form-wrapper{
+    width: 90%;
+    padding: 1.5em 1em;
+    margin-inline: auto; 
+}
+
+.assingment-input {
+    display: block;
+    width: 90%;
+    padding-block: .8em;
+    margin-top: .5em;
+    margin-bottom: 1.8em;
+   
+}
+.assn-file-input {
+    margin-bottom: 1.8em;
+}
+
+.assingment-form-wrapper > * {
+    margin-bottom: 1em;
+}
+
+
+
 
 
 /* media queries */
@@ -385,6 +416,9 @@ img {
     }
 
     /* assignment page */
+    .create-assingment {
+        width: 40%;
+    }
     .grid-m {
         display: block;
     }
@@ -415,10 +449,16 @@ img {
     #notice-title {
         width: 90%;
     }
+
+    /* create assingment */
+
+    .assingment-form-wrapper {
+        width: 65%;
+    }
 }
 
 
-/* desktops */
+/************************ desktops *********************************************/
 
 @media (min-width: 1200px){
 
@@ -467,6 +507,10 @@ img {
     
     /* assingment page */
 
+    .create-assingment {
+        width: 25%;
+    }
+
     .assingment-card {
         align-items: center;
     }
@@ -510,6 +554,13 @@ img {
 
     #notice-title {
         width: 90%;
+    }
+
+
+    /* create assingment */
+
+    .assingment-form-wrapper {
+        width: 45%;
     }
     
 
