@@ -22,7 +22,7 @@ body {
 }
 
 
-h1,h3,h4,p {
+h1,h2,h3,h4,p {
     margin: 0;
 }
 
@@ -256,6 +256,7 @@ img {
 /* notice */
 
 .notice-card{
+
     background-color: bisque;
     padding: 1em;
     border-radius: 10px;
@@ -269,6 +270,31 @@ img {
 .time-wrapper {
     display: flex;
     justify-content: end;
+}
+
+/* inbox */
+
+.title-heading {
+    margin-bottom: 2em;
+}
+
+.message-container {
+    display: grid;
+    grid-template-columns: 30% 60% 10%;
+    align-items: center;
+    padding: .85em 1em;
+    background-color: white;
+    cursor: pointer;
+    margin-bottom: .5em;
+}
+
+.sm {
+    display: none;
+}
+
+.ic-msg {
+    width: 1.5em;
+    height: 1.5em;
 }
 
 
@@ -300,6 +326,15 @@ img {
 
     .grid-col-6 {
         grid-template-columns: 40% 20% 20% 20%;
+    }
+
+    /* inbox */
+    .message-container {
+        grid-template-columns: 20% 40% 20% 20%;
+    }
+
+    .sm {
+        display: block;
     }
 }
 
