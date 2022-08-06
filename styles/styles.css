@@ -66,6 +66,7 @@ img {
     background-color: #8a70d6;
     color: white;
     cursor: pointer;
+    width: 70%
 
 }
 
@@ -174,6 +175,7 @@ img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 1em;
+    row-gap: 1em;
 }
 
 .outer-card {
@@ -330,11 +332,19 @@ img {
 
     /* inbox */
     .message-container {
+        width: 90%;
         grid-template-columns: 20% 40% 20% 20%;
     }
 
     .sm {
         display: block;
+    }
+    .time-sent {
+        text-align: end;
+    }
+
+    .ic-msg {
+        padding-left: 5em;
     }
 }
 
@@ -418,6 +428,10 @@ img {
         transition: border-color 800ms ease-in
     }
 
+    /* inbox */
+    .message-container {
+        margin-inline: auto;
+    }
     
 
 
