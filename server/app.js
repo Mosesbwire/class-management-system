@@ -4,6 +4,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
+const bodyParser = require('body-parser')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -20,14 +21,18 @@ mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true})
 const db = mongoose.connection
 
 db.on('error', console.error.bind(console, 'MongoDB CONNECTION ERROR'))
+
 app.use(logger('dev'));
 app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '..','client')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/tutor', tutorRouter)
+
+
 
 module.exports = app;
