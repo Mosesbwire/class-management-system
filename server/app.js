@@ -5,6 +5,7 @@ var logger = require('morgan');
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
 const bodyParser = require('body-parser')
+const cors = require('cors')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -22,6 +23,9 @@ const db = mongoose.connection
 
 db.on('error', console.error.bind(console, 'MongoDB CONNECTION ERROR'))
 
+app.use(cors({
+    origin: 'http://localhost:5500'
+}))
 app.use(logger('dev'));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }))
