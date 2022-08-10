@@ -11,7 +11,6 @@ form.addEventListener('submit', async (event)=>{
             data[e.name] = e.value
         }
     })
-    
     const response = await fetch('http://localhost:3000/tutor/sign-up', {
         method: 'POST',
         body: JSON.stringify(data),
@@ -20,7 +19,14 @@ form.addEventListener('submit', async (event)=>{
         }
     })
 
-    console.log(response)
+    if (response.ok){
+        const tutor = await response.json()
+        sessionStorage.setItem('user', JSON.stringify(tutor))
+        window.location.href = 'lecturer-dashboard.html'
+
+    }
+
+    
 
 })
 
