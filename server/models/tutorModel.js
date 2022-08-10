@@ -1,4 +1,6 @@
 const mongoose = require('mongoose')
+const bcrypt = require('bcrypt')
+const saltRounds = 8
 
 const Schema = mongoose.Schema
 
@@ -24,7 +26,13 @@ TutorSchema.virtual('name')
     return fullName
 })
 
+TutorSchema.methods.generateHash = async function(password){
+    const hashedPassword = await bcrypt.hash(password, saltRounds)
+    return hashedPassword
+}
 
-
+TutorSchema.methods.validPassword = function(password){
+    return bcrypt.compare(password, this.password)
+}
 
 module.exports = mongoose.model('Tutor', TutorSchema)
