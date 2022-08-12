@@ -37,11 +37,19 @@ function login(req,res,next){
     })(req,res,next)
 }
 
+function logout(req,res,next){
+    req.logout((err)=>{
+        if(err) {return next(err)}
 
 
+        res.status(200).json({msg: 'logged out'})
+    })
+   
+}
 
 module.exports = {
     create,
     login,
+    logout
 }
 
