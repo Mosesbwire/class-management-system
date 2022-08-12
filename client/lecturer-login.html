@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
     <title>Login</title>
 </head>
 <body>
     <div class="container">
         <div class="form-container">
-            <form action="" method="get">
-                <div class="form-group login-input-wrapper">
-                    <label for="staff-id">Staff Id</label>
-                    <input type="text" name="staff-id" id="">
+            <form action="" method="get" id="lec-login">
+                <div class="errors" id="login-errors">
+
+                </div>
+                <div class="form-group login-input-wrapper" >
+                    <label for="email">E-mail</label>
+                    <input type="email" name="username" id="">
                 </div>
                 <div class="form-group login-input-wrapper">
                     <label for="password">Password</label>
@@ -25,5 +28,7 @@
             </form>
         </div>
     </div>
+
+    <script src="./javascript/login.js"></script>
 </body>
 </html>

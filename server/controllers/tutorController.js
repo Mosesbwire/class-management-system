@@ -1,11 +1,11 @@
 const Tutor = require('../models/tutorModel')
 const path = require('path')
+const passport = require('passport')
 
-// responds with sign up page
 
 
 async function create(req,res){
-
+    // handle request errors -- handle model validation before creating obj
     let tutor = new Tutor()
 
     tutor.first_name = req.body.firstname
@@ -25,7 +25,23 @@ async function create(req,res){
 }
 
 
+function login(req,res,next){
+    passport.authenticate('local',{}, (err,user,info)=>{
+
+        // todo handle errors here
+        if(!user){
+            return res.status(401).json(info)
+        }
+
+        res.json(user)
+    })(req,res,next)
+}
+
+
+
+
 module.exports = {
-    create
+    create,
+    login,
 }
 

@@ -4,15 +4,16 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
-const bodyParser = require('body-parser')
 const cors = require('cors')
+const session = require('express-session')
+const passport = require('passport')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const tutorRouter = require('./routes/tutorRoute')
 
 var app = express();
-
+require('./config/passport')(passport)
 dotenv.config()
 
 const mongoDB = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@class.otxyqq2.mongodb.net/?retryWrites=true&w=majority`
@@ -28,10 +29,16 @@ app.use(cors({
 }))
 app.use(logger('dev'));
 app.use(express.json());
-app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.urlencoded({ extended: false }));
+app.use(session({
+    secret: 'this is a secret',
+    resave: true,
+    saveUninitialized: true
+}))
+app.use(passport.initialize())
+app.use(passport.session())
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '..','client')));
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
