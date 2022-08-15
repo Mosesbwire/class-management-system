@@ -4,6 +4,7 @@ const errors = document.getElementById('login-errors')
 const data = {}
 
 
+
 form.addEventListener('submit', async (event)=>{
     
     event.preventDefault()
@@ -16,6 +17,7 @@ form.addEventListener('submit', async (event)=>{
     
     const response = await fetch('http://localhost:3000/tutor/login', {
         method: 'POST',
+        credentials: 'include',
         body: JSON.stringify(data),
         headers: {
             'Content-Type': 'application/json; charset=UTF-8'
@@ -31,7 +33,7 @@ form.addEventListener('submit', async (event)=>{
     }
 
     if (response.ok){
-        sessionStorage.setItem('user', JSON.stringify(responseObj))
+    
         window.location.href = 'lecturer-dashboard.html'
     }
 

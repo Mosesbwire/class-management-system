@@ -26,12 +26,14 @@ passport.use('local',new LocalStrategy(function verify(username, password,cb){
 
 
 passport.serializeUser(function(user, cb) {
+   
     process.nextTick(function() {
-      cb(null, { id: user.id, username: user.e_mail_address });
+      cb(null, { id: user._id, username: user.e_mail_address });
     });
   });
   
 passport.deserializeUser(function(user, cb) {
+    console.log('in deserialize....')
     process.nextTick(function() {
       return cb(null, user);
     });

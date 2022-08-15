@@ -22,8 +22,7 @@ form.addEventListener('submit', async (event)=>{
     if (response.ok){
         const tutor = await response.json()
         sessionStorage.setItem('user', JSON.stringify(tutor))
-        window.location.href = 'lecturer-dashboard.html'
-
+        window.location.replace('http://localhost:5500/client/lecturer-dashboard.html')
     }
 
     

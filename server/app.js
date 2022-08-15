@@ -25,19 +25,23 @@ const db = mongoose.connection
 db.on('error', console.error.bind(console, 'MongoDB CONNECTION ERROR'))
 
 app.use(cors({
-    origin: 'http://localhost:5500'
+    origin: 'http://localhost:5500',
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true
+    
 }))
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+// app.use(cookieParser());
 app.use(session({
     secret: 'this is a secret',
-    resave: true,
-    saveUninitialized: true
+    resave: false,
+    saveUninitialized: false,
 }))
 app.use(passport.initialize())
 app.use(passport.session())
-app.use(cookieParser());
+
 
 
 app.use('/', indexRouter);
