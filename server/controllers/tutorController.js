@@ -63,9 +63,8 @@ function logout(req,res,next){
 }
 
 function getDashboard(req,res,next){
-    console.log('getting dashboard')
-    console.log(req.session)
-    res.status(200).json({msg: 'logged in'})
+    
+    res.status(200).json(req.user)
 }
 
 module.exports = {

@@ -1,12 +1,11 @@
 module.exports = {
     ensureAuthenticated: function(req,res,next){
         
-        if(req.isAuthenticated){
-
+        if(req.isAuthenticated()){
+            console.log(req.isAuthenticated())
             return next()
         }
-
-        res.status(401).json({message: 'Login to access this resource'})
+        return res.status(401).json({message: 'Login to access this resource'})
     }
 
 }
