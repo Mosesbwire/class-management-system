@@ -11,6 +11,7 @@ const passport = require('passport')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const tutorRouter = require('./routes/tutorRoute')
+const classRouter = require('./routes/classRoute')
 
 var app = express();
 require('./config/passport')(passport)
@@ -46,7 +47,8 @@ app.use(passport.session())
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/tutor', tutorRouter)
+app.use('/tutor', tutorRouter);
+app.use('/class', classRouter)
 
 
 
