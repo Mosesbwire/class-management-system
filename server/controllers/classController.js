@@ -7,7 +7,7 @@ function create(req,res,next){
         tutor: req.user.id,
         name: req.body.name,
         totalHours: req.body.hours,
-        totalNummberOfTopics: req.body.topics,
+        totalNumberOfTopics: req.body.topics,
 
     })
 

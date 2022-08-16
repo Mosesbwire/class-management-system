@@ -10,7 +10,7 @@ const { create,
 
 classRouter.post('/create', ensureAuthenticated, create)
 classRouter.get('/classes',ensureAuthenticated, getAllClasses)
-classRouter.get('/:id',ensureAuthenticated.getClass)
+classRouter.get('/:id',ensureAuthenticated,getClass)
 
 
 
