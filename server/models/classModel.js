@@ -7,7 +7,7 @@ const ClassSchema = new Schema({
     name: {type: String, required: true},
     totalHours: {type: Number, required: true},
     totalNumberOfTopics: {type: Number, required: true},
-    inSession: {type: Boolean, required: true, default: true}
+    inSession: {type: Boolean, default: true}
 })
 
 ClassSchema.virtual('url')
