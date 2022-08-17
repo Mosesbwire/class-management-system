@@ -9,7 +9,7 @@ const TutorSchema = new Schema(
         first_name: {type: String, maxLength: 100, required: true},
         last_name: {type: String, maxLength: 100, required: true},
         e_mail_address: {type: String, maxLength: 100, required: true, unique: true},
-        password: {type: String}
+        password: {type: String, required: true}
     }
 );
 
@@ -31,8 +31,8 @@ TutorSchema.methods.generateHash = async function(password){
     return hashedPassword
 }
 
-TutorSchema.methods.validPassword = function(password){
-    return bcrypt.compare(password, this.password)
+TutorSchema.methods.validPassword = async function(password){
+    return await bcrypt.compare(password, this.password)
 }
 
 module.exports = mongoose.model('Tutor', TutorSchema)
