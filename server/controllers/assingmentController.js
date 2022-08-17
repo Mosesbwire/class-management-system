@@ -7,7 +7,7 @@ function create(req,res, next){
         score: req.body.score,
         tutor: req.user.id,
         dueDate: req.body.date,
-        file: req.body.file,
+        file: JSON.stringify(req.file),
         course: req.body.course
     })
 

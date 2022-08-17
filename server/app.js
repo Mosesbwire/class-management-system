@@ -8,6 +8,7 @@ const cors = require('cors')
 const session = require('express-session')
 const passport = require('passport')
 
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const tutorRouter = require('./routes/tutorRoute')
@@ -35,6 +36,7 @@ app.use(cors({
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
 // app.use(cookieParser());
 app.use(session({
     secret: 'this is a secret',
