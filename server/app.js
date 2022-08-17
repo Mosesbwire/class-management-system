@@ -14,6 +14,7 @@ var usersRouter = require('./routes/users');
 const tutorRouter = require('./routes/tutorRoute')
 const classRouter = require('./routes/classRoute')
 const assingmentRouter = require('./routes/assingmentRoute')
+const studentRouter = require('./routes/studentRoute')
 
 var app = express();
 require('./config/passport')(passport)
@@ -53,6 +54,7 @@ app.use('/users', usersRouter);
 app.use('/tutor', tutorRouter);
 app.use('/class', classRouter)
 app.use('/assingment', assingmentRouter)
+app.use('/student', studentRouter)
 
 
 
