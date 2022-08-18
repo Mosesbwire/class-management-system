@@ -1,4 +1,6 @@
 const Assingment = require('../models/assingmentModel')
+const fs = require('fs')
+const path = require('path')
 
 
 function create(req,res, next){
@@ -7,9 +9,11 @@ function create(req,res, next){
         score: req.body.score,
         tutor: req.user.id,
         dueDate: req.body.date,
-        file: JSON.stringify(req.file),
+        file: req.file.filename,
         course: req.body.course
     })
+
+
 
     assingment.save(function(err){
         if(err){ return next(err)}
@@ -42,9 +46,18 @@ function getAssingment(req,res,next){
     })
 }
 
+function download(req,res,next){
+    Assingment.findById(req.params.id, (err,assingment)=>{
+        if(err) { return next(err)}
+        res.status(200).json(assingment)
+        
+    })
+}
+
 
 module.exports = {
     create,
     getAllAssingments,
-    getAssingment
+    getAssingment,
+    download
 }
