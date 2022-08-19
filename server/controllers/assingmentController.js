@@ -49,7 +49,12 @@ function getAssingment(req,res,next){
 function download(req,res,next){
     Assingment.findById(req.params.id, (err,assingment)=>{
         if(err) { return next(err)}
-        res.status(200).json(assingment)
+        res.download(path.join(__dirname, '..','assingments','lecturer-uploads', `${assingment.file}`), 
+        (err)=>{
+            if(err) {return next(err)}
+
+            console.log('download was successful')
+        })
         
     })
 }
