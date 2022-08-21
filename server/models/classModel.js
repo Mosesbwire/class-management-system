@@ -7,7 +7,12 @@ const ClassSchema = new Schema({
     name: {type: String, required: true},
     totalHours: {type: Number, required: true},
     totalNumberOfTopics: {type: Number, required: true},
-    inSession: {type: Boolean, default: true}
+    inSession: {type: Boolean, default: true},
+    students: [
+        new Schema({
+            student: Schema.Types.ObjectId
+        }, {_id: false})
+    ]
 })
 
 ClassSchema.virtual('url')
