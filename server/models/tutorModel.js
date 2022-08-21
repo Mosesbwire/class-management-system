@@ -8,7 +8,7 @@ const TutorSchema = new Schema(
     {
         first_name: {type: String, maxLength: 100, required: true},
         last_name: {type: String, maxLength: 100, required: true},
-        e_mail_address: {type: String, maxLength: 100, required: true, unique: true},
+        email: {type: String, maxLength: 100, required: true, unique: true},
         password: {type: String, required: true}
     }
 );

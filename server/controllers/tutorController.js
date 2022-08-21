@@ -10,7 +10,7 @@ async function create(req,res, next){
 
     tutor.first_name = req.body.firstname
     tutor.last_name = req.body.lastname
-    tutor.e_mail_address =req.body.email
+    tutor.email =req.body.email
     tutor.password = await tutor.generateHash(req.body.password)
     
     tutor.save(function(err){
