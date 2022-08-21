@@ -4,13 +4,15 @@ const { ensureAuthenticated} = require('../config/auth')
 
 const { create,
         getAllClasses,
-        getClass
+        getClass,
+        joinClass
 } = require('../controllers/classController')
 
 
 classRouter.post('/create', ensureAuthenticated, create)
 classRouter.get('/classes',ensureAuthenticated, getAllClasses)
 classRouter.get('/:id',ensureAuthenticated,getClass)
+classRouter.post('/join/:id',joinClass)
 
 
 
