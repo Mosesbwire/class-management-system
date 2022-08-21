@@ -3,13 +3,13 @@ const passport = require('passport')
 
 
 async function create(req,res,next){
-    const student = new Student({
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        email: req.body.email
-    })
-
-    student.password = await student.generateHash(req.body.password)
+    const student = new Student()
+    
+        student.firstName = req.body.firstName,
+        student.lastName = req.body.lastName,
+        student.email = req.body.username
+        console.log(req.body)
+        student.password = await student.generateHash(req.body.password)
 
     student.save(function(err){
         if (err){ return next(err)}
@@ -23,7 +23,7 @@ async function create(req,res,next){
 }
 
 function login(req,res,next){
-    passport.authenticate('local', {}, (err,user,info)=>{
+    passport.authenticate('local-student', {}, (err,user,info)=>{
 
         if(!user){
             return res.status(401).json(info)
