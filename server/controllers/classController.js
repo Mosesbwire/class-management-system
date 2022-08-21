@@ -41,8 +41,25 @@ async function getClass(req,res,next){
     })
 }
 
+function joinClass(req,res,next){
+    Class.findById(req.params.id, (err,course)=>{
+        if(err){ return next(err)}
+
+        course.students.push({student: req.user.id})
+        course.save(function(err){
+            if(err){ return next(err)}
+
+            res.status(200).json(course)
+        })
+
+    })
+    
+
+}
+
 module.exports = {
     create,
     getAllClasses,
-    getClass
+    getClass,
+    joinClass
 }
