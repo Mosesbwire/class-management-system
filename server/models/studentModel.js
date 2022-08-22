@@ -33,6 +33,7 @@ StudentSchema.virtual('url')
 
 
 StudentSchema.methods.generateHash = async function(password){
+    
     const hashedPassword = await bcrypt.hash(password, saltRounds)
     return hashedPassword
 }
